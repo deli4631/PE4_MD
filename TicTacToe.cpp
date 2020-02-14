@@ -40,19 +40,28 @@ class TicTacToe {
             CreateBoard(); 
         }
 
+        // will display the board 
+        void DisplayBoard(){
+            for(int i = 0; i < 3; ++i){
+                for(int j = 0; j < 3; j++){
+                    std::cout << to_emoji(board_[i][j]);
+                }
+                std::cout << endl;
+            }
+        }
+
     private: 
 	    Title board_[3][3];
-
-    /**
-     * creates a 3 by 3 arr of type Title
-    */
-	void CreateBoard() {
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
-				board_[i][j] = Title::blank; 
-			}
-		}
-	}
+        /**
+         * creates a 3 by 3 arr of type Title
+        */
+        void CreateBoard() {
+            for(int i = 0; i < 3; i++) {
+                for(int j = 0; j < 3; j++) {
+                    board_[i][j] = Title::blank; 
+                }
+            }
+        }
 };
 
 /**
