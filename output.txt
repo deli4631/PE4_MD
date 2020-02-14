@@ -1,0 +1,67 @@
+⬜️ ⬜️ ⬜️
+⬜️ ⬜️ ⬜️
+⬜️ ⬜️ ⬜️
+
+What row do you want: 0
+
+What column do you want: 0
+⭕️ ⬜️ ⬜️
+⬜️ ⬜️ ⬜️
+⬜️ ⬜️ ⬜️
+
+What row do you want: 0
+
+What column do you want: 1
+⭕️ ❌ ⬜️
+⬜️ ⬜️ ⬜️
+⬜️ ⬜️ ⬜️
+
+What row do you want: 1
+
+What column do you want: 1
+⭕️ ❌ ⬜️
+⬜️ ⭕️ ⬜️
+⬜️ ⬜️ ⬜️
+
+What row do you want: 2
+
+What column do you want: 2
+⭕️ ❌ ⬜️
+⬜️ ⭕️ ⬜️
+⬜️ ⬜️ ❌
+
+What row do you want: 0
+
+What column do you want: 2
+⭕️ ❌ ⭕️
+⬜️ ⭕️ ⬜️
+⬜️ ⬜️ ❌
+
+What row do you want: 1
+
+What column do you want: 0
+⭕️ ❌ ⭕️
+❌ ⭕️ ⬜️
+⬜️ ⬜️ ❌
+
+What row do you want: 1
+
+What column do you want: 2
+⭕️ ❌ ⭕️
+❌ ⭕️ ⭕️
+⬜️ ⬜️ ❌
+
+What row do you want: 2
+
+What column do you want: 0
+⭕️ ❌ ⭕️
+❌ ⭕️ ⭕️
+❌ ⬜️ ❌
+
+What row do you want: 2
+
+What column do you want: 1
+
+⭕️ ❌ ⭕️
+❌ ⭕️ ⭕️
+❌ ❌ ❌
