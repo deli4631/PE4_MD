@@ -6,6 +6,7 @@
 */
 
 #include <iostream>
+#include <string>
 using namespace std; 
 
 // enum class TilesSquare = {X_title, O_title};
@@ -26,10 +27,6 @@ std::string to_emoji(Title title){
 struct Position {
 	int row;
 	int col;
-
-	bool operator==(const Position &other) {
-		return row == other.row && col == other.col;
-	}
 };
 
 class TicTacToe {
@@ -54,47 +51,48 @@ class TicTacToe {
         }
 
     //Displaying board
-    void DisplayBoard()
-    {
-        for (int row = 0; row < 3; row++)
-        {
-            for (int col = 0; col < 3; col++)
-            {
-                cout << get_emoji(board_[row][col]) << " \n" [col == 2];
+    void DisplayBoard(){
+        for (int row = 0; row < 3; row++){
+            for (int col = 0; col < 3; col++){
+                cout << to_emoji(board_[row][col]) << " \n" [col == 2];
             }
         }
     }
+
     // place marker will get the position of the player and mark it with an x or o
-    bool PlaceMarker(Position pos){
+    void PlaceMarker(Position pos){
         Title mark;
+
         if(turn == 0){  
-            mark = Title::X
+            mark = Title::X;
         } else{
-            mark = Title::O
+            mark = Title::O;
         }
 
-        if(board_[pos.row][pos.col] != Title::blank){
-            board[pos.row][pos.col] = mark;
-            return true;
+        turn++;
+        if(turn > 1){
+            turn = 0;
+        }
+   
+        if(board_[pos.row][pos.col] == Title::blank){
+            board_[pos.row][pos.col] = mark;
         } 
-        return false;
     }
 
     Position GetPlayerChoice(){
+        int choice1, choice2;
         std::cout << "\n";
         std::cout << "What row do you want: ";
-        getline(std::cin, choice1);
+        std::cin >> choice1;
         std::cout << "\n";
         std::cout << "What column do you want: ";
-        getline(std::cin, choice2);
-        int choice1 = stoi(choice1);
-        int choice2 = stoi(choice2);
+        std::cin >> choice2;
+        
         return Position{choice1, choice2};
     }
 
     private: 
 	    Title board_[3][3];
-        std::vector<std::string> players;
         int turn;
 };
 
@@ -104,7 +102,11 @@ class TicTacToe {
 int main() {
 	// Calls CreateBoard() with the constructor function
 	TicTacToe game; 
+
+    for(int i = 0; i < 9; ++i){
+        game.DisplayBoard();
+        game.PlaceMarker(game.GetPlayerChoice());
+    }
+    game.DisplayBoard();
 }
 
-
-return Position{choice1, choice}
