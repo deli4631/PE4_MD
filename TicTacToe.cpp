@@ -40,6 +40,18 @@ class TicTacToe {
             CreateBoard(); 
         }
 
+    //Displaying board
+    void DisplayBoard()
+    {
+        for (int row = 0; row < 3; row++)
+        {
+            for (int col = 0; col < 3; col++)
+            {
+                cout << get_emoji(board_[row][col]) << " \n" [col == 2];
+            }
+        }
+    }
+
     private: 
 	    Title board_[3][3];
 
