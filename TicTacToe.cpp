@@ -52,7 +52,18 @@ class TicTacToe {
         }
     }
 
-
+    Position GetPlayerChoice()
+    {
+        std::cout << "\n";
+        std::cout << "What row do you want: ";
+        getline(std::cin, choice1);
+        std::cout << "\n";
+        std::cout << "What column do you want: ";
+        getline(std::cin, choice2);
+        int choice1 = stoi(choice1);
+        int choice2 = stoi(choice2);
+        return Position{choice1, choice2};
+    }
     private: 
 	    Title board_[3][3];
         /**
