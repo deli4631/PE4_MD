@@ -11,6 +11,16 @@ using namespace std;
 // enum class TilesSquare = {X_title, O_title};
 enum class Title {X, O, blank};
 
+std::string to_emoji(Title title){
+    if(title == Title::X){
+        return "❌";
+    } else if (title == Title::O){
+        return "⭕️";
+    } else {
+        return "⬜️";
+    }
+}
+
 // used to track positions on the board
 struct Position {
 	int row;
