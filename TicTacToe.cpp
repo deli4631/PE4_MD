@@ -40,16 +40,30 @@ class TicTacToe {
             CreateBoard(); 
         }
 
-        // will display the board 
-        void DisplayBoard(){
-            for(int i = 0; i < 3; ++i){
-                for(int j = 0; j < 3; j++){
-                    std::cout << to_emoji(board_[i][j]);
-                }
-                std::cout << endl;
+    //Displaying board
+    void DisplayBoard()
+    {
+        for (int row = 0; row < 3; row++)
+        {
+            for (int col = 0; col < 3; col++)
+            {
+                cout << get_emoji(board_[row][col]) << " \n" [col == 2];
             }
         }
+    }
 
+    Position GetPlayerChoice()
+    {
+        std::cout << "\n";
+        std::cout << "What row do you want: ";
+        getline(std::cin, choice1);
+        std::cout << "\n";
+        std::cout << "What column do you want: ";
+        getline(std::cin, choice2);
+        int choice1 = stoi(choice1);
+        int choice2 = stoi(choice2);
+        return Position{choice1, choice2};
+    }
     private: 
 	    Title board_[3][3];
         /**
